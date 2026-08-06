@@ -1,0 +1,1 @@
+{"name":"Local: q234","url":"c:\\Users\\raghu\\Downloads\\c++\\q234.cpp","tests":[{"id":1782144876309,"input":"5\n4\nabab\n6\nbababa\n7\nabababa\n2\nab\n1\nb\n","output":"1\n2\n2\n0\n0\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q234.cpp","group":"local","local":true}

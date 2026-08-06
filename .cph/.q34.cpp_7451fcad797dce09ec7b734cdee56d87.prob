@@ -1,0 +1,1 @@
+{"name":"Local: q34","url":"c:\\Users\\raghu\\Downloads\\c++\\q34.cpp","tests":[{"id":1766851559066,"input":"7\nYY\nNN\nNNY\nYYYNY\nNNNNN\nYYYYYY\nYNNNNN\n","output":"NO\nYES\nYES\nNO\nYES\nNO\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q34.cpp","group":"local","local":true}

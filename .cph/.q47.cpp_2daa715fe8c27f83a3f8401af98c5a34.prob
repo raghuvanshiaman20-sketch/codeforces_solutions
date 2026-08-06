@@ -1,0 +1,1 @@
+{"name":"Local: q47","url":"c:\\Users\\raghu\\Downloads\\c++\\q47.cpp","tests":[{"id":1767585957697,"input":"4\n1\n2\n333\n1000000000\n","output":"YES\nNO\nNO\nYES\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q47.cpp","group":"local","local":true}

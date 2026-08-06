@@ -1,0 +1,1 @@
+{"name":"Local: q72","url":"c:\\Users\\raghu\\Downloads\\c++\\q72.cpp","tests":[{"id":1768665542215,"input":"3\n3\n000\n2\n10\n3\n101\n","output":"Bob\nAlice\n2\n1 2 \nAlice\n2\n1 2 \n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q72.cpp","group":"local","local":true}

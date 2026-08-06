@@ -1,0 +1,1 @@
+{"name":"Local: q28","url":"c:\\Users\\raghu\\Downloads\\c++\\q28.cpp","tests":[{"id":1766227197871,"input":"5\n6\n96\n78\n122\n696\n","output":"6\n6\n7\n1\n6\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q28.cpp","group":"local","local":true}

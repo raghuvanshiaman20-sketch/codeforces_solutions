@@ -1,0 +1,1 @@
+{"name":"Local: q42","url":"c:\\Users\\raghu\\Downloads\\c++\\q42.cpp","tests":[{"id":1767349091545,"input":"7\n0\n5\n15\n42\n1337\n17101997\n998244353\n","output":"1\n3\n4\n9\n270\n3420402\n199648872\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q42.cpp","group":"local","local":true}

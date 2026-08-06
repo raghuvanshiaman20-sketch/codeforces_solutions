@@ -1,0 +1,1 @@
+{"name":"Local: q111","url":"c:\\Users\\raghu\\Downloads\\c++\\q111.cpp","tests":[{"id":1770445654325,"input":"4\n1 5\n2 3\n2 5\n6 51\n","output":"5\n1 2\n5 0\n3 1 1 32 2 12"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q111.cpp","group":"local","local":true}

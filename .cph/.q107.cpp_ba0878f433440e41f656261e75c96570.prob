@@ -1,0 +1,1 @@
+{"name":"Local: q107","url":"c:\\Users\\raghu\\Downloads\\c++\\q107.cpp","tests":[{"id":1770124635982,"input":"5 2\n1 3 1 4 2\n","output":"4\n"},{"id":1770124649937,"input":"6 4\n1 1 2 2 3 3\n","output":"6\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q107.cpp","group":"local","local":true}

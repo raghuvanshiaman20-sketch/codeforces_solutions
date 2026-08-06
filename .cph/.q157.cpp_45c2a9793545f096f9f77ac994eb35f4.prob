@@ -1,0 +1,1 @@
+{"name":"Local: q157","url":"c:\\Users\\raghu\\Downloads\\c++\\q157.cpp","tests":[{"id":1774777690579,"input":"4\n2\n3\n5\n10\n","output":"0 1\n2 0 1\n3 2 1 0 4\n4 6 3 2 0 8 9 1 7 5\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\raghu\\Downloads\\c++\\q157.cpp","group":"local","local":true}
