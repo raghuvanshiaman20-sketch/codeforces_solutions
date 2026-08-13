@@ -1,5 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
+vector<vector<int>> adj(200001);
+long long ans=0;
+vector<int> h;
+void dfs(int el,int p){
+    int mx=0,smx=0;
+    for(auto it: adj[el]){
+        if(it==p) continue;
+        dfs(it,el);
+        int x=h[it]+1;
+        if(x>=mx){
+            smx=mx;
+            mx=x;
+        }
+        else smx=max(smx,x);
+    }
+    h[el]=mx;
+    ans+=smx;
+}
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -8,48 +26,16 @@ int main(){
     while(t--){
         int n;
         cin>>n;
-        vector<vector<int>> adj(n+1);
-        for(int i=1;i<n;i++){
-            int x;
-            cin>>x;
-            adj[x].push_back(i+1);
+        for(int i=1;i<=n;i++) adj[i].clear();
+        ans=n;
+        h=vector<int>(n+1,0);
+        vector<int> p(n+1);
+        for(int i=2;i<=n;i++){
+            cin>>p[i];
+            adj[p[i]].push_back(i);
+            adj[i].push_back(p[i]);
         }
-        long long ans=n;
-        vector<int> d(n+1);
-        vector<pair<int,int>> p;
-        stack<int> st;
-        st.push(1);
-        d[1]=0;
-        while(!st.empty()){
-            int el=st.top();
-            st.pop();
-            for(auto it: adj[el]){
-                d[it]=d[el]+1;
-                p.push_back({d[it],el});
-                st.push(it);
-            }
-        }
-        sort(p.begin(),p.end());
-        int cnt=0,pp=0,de=0,i=0;
-        for(auto it:p){
-            if(i==0){
-                cnt++;
-                pp=it.second;
-                de=it.first;
-                i++;
-                continue;
-            }
-            if(pp==it.second&&de==it.first){
-                cnt++;
-            }
-            else{
-                if(cnt>=2) ans++;
-                cnt=1;
-                pp=it.second;
-                de=it.first;
-            }
-        }
-        if(cnt>=2) ans++;
+        dfs(1,0);
         cout<<ans<<endl;
     }
 }
