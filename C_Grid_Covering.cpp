@@ -6,17 +6,9 @@ int main(){
     int t;
     cin>>t;
     while(t--){
-        int n,m,a,b;
+        long long n,m,a,b;
         cin>>n>>m>>a>>b;
-        if(a==1&&b==1){
-            cout<<"YES\n";
-            continue;
-        }
-        if(n%a==0||m%b==0||a%n==0||b%m==0){
-            cout<<"NO\n";
-            continue;
-        }
-        if(n>a*2||m>b*2) cout<<"NO\n";
+        if(__gcd(n,a)!=1||__gcd(m,b)!=1||__gcd(n,m)>2) cout<<"NO\n";
         else cout<<"YES\n";
     }
 }
