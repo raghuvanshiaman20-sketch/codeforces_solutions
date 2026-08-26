@@ -1,20 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<vector<int>> adj(200001);
-vector<int> vis(200001);
-vector<int> col(200001,-1);
-bool dfs(int el,int& cnt,vector<int>& vis,vector<int>& col,vector<vector<int>> adj){
-    vis[el]=1;
-    cnt++;
-    for(auto it:adj[el]){
-        if(col[it]==-1){
-            col[it]=1-col[el];
-            if(!dfs(it,cnt,vis,col,adj)) return false;
-        }
-        else if(col[it]==col[el]) return false;
-    }
-    return true;
-}
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -23,7 +8,8 @@ int main(){
     while(t--){
         int n,m;
         cin>>n>>m;
-        for(int i=1;i<=n;i++) adj[i].clear(),vis[i]=0,col[i]=-1;
+        vector<vector<int>> adj(n+1);
+        vector<int> col(n+1,-1);
         for(int i=0;i<m;i++){
             int x,y;
             cin>>x>>y;
@@ -32,13 +18,25 @@ int main(){
         }
         int ans=0;
         for(int i=1;i<=n;i++){
-            if(vis[i]==0){
+            if(col[i]==-1){
+                queue<int> q;
+                q.push(i);
+                vector<int> cnt(2);
                 col[i]=0;
-                int cnt=0;
-                if(dfs(i,cnt,vis,col,adj)){
-                    cnt++;
-                    ans+=(cnt/2);
+                bool r=true;
+                while(!q.empty()){
+                    int el=q.front();
+                    q.pop();
+                    cnt[col[el]]++;
+                    for(auto it:adj[el]){
+                        if(col[it]==col[el]) r=false;
+                        else if(col[it]==-1){
+                            col[it]=col[el]^1;
+                            q.push(it);
+                        }
+                    }
                 }
+                if(r) ans+=max(cnt[0],cnt[1]);
             }
         }
         cout<<ans<<endl;
